@@ -9,7 +9,7 @@ We use a LESS library to implement support for tabs, and then in the main
 LESS file we can declaratively mention that we want tabs for a specific element
 like
 
-```css
+```less
 .tabs (
     selector1, selector2, ... selectorN;
     label1, label2, ...       labelN;    
@@ -19,7 +19,7 @@ like
 or, if we want all the other elements not selected by the specified selectors to be
 available in a last tab, we can use 
 
-```css
+```less
 .tabsWithOthers (
     selector1, selector2, ... selectorN;
     label1, label2, ...       labelN;
@@ -34,7 +34,7 @@ the 3rd tab containing the content of `steps` labled `Steps` and a last tab
 containing all the other elements labeld `More....` we can use something like:
 
 
-```css
+```less
 taskbody{
     .tabsWithOthers(
         prereq, context, steps;
@@ -49,7 +49,7 @@ different languages, marked with the `outputclass` attribute, then in order to
 create 3 tabs to show Java, CPP and XML blocks, we can use something like:
 
 
-```css
+```less
 div{
     .tabs(
         "codeblock[outputclass~='language-java']", 
