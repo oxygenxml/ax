@@ -67,4 +67,5 @@ in the oXygen XML Author mode
 
 or you can try it live in the oXygen XML Web Author with the tabs described above, specified in the 
 `tabs/css/task.less` file:
-[task.dita](https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github%3A%2F%2FgetFileContent%2Foxygenxml%2Fax%2Fmaster%2Ftabs%2Fsample%2Ftask.dita)
+[task.dita](https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github%3A%2F%2FgetFileContent%2Foxygenxml%2Fax%2Fmaster%2Ftabs%2Fsample%2Ftask.dita).
+
