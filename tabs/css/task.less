@@ -2,14 +2,17 @@
 
 taskbody{
     .tabsWithOthers(
-        prereq, context, steps,  result;
-        Pre-requisites, Context, Steps,  Result;
+        prereq, context, steps;
+        Pre-requisites, Context, Steps;
+        'More...'
     );
 }
   
 div{
     .tabs(
-        "codeblock[outputclass~='language-java']", "codeblock[outputclass~='language-cpp']", "codeblock[outputclass~='language-xml']";
+        "codeblock[outputclass~='language-java']", 
+        "codeblock[outputclass~='language-cpp']", 
+        "codeblock[outputclass~='language-xml']";
         Java, CPP, XML;
     );
 }
