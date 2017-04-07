@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE task PUBLIC "-//OASIS//DTD DITA Task//EN" "task.dtd">
+<?xml-stylesheet type="text/css" href="../css/task.css"?>
+<task id="task_ztz_15d_mz">
+    <title>A demo file</title>
+    <shortdesc>Show how we can use tabs to provide a more compact editing environment.</shortdesc>
+    <taskbody>
+        <prereq>You need oXygen XML Editor or oXygen XML Author on a desktop, or you can use oXygen
+            XML Web Author from a browser.</prereq>
+        <context id="context_xnc_mrm_mz">Sometimes it is useful to present content in different
+            tabs, thus you can focus on a specific category of information at a time and you get
+            also a more compact rendering.</context>
+        <steps>
+            <step>
+                <cmd>Start oXygen XML Editor or XML Author on a desktop, or go to the dashboard for
+                    the oXygen XML Web Author</cmd>
+            </step>
+            <step>
+                <cmd>Download this project files, in case you use the oXygen XML Editor or oXygen XML Author</cmd>
+            </step>
+            <step>
+                <cmd>Open the sample file</cmd>
+            </step>
+            <step>
+                <cmd>Observe the tabs in the Author visual editing mode</cmd>
+            </step>
+            <step>
+                <cmd>Look at the task.less file to see how the tabs were created</cmd>
+            </step>
+        </steps>
+        <result id="result_vky_jrm_mz">The result is impressive, right? :)</result>
+        <example>
+            <title>Here it is another example, that provides code samples in 3 languages, Java, CPP and XML</title>
+            <div outputclass="codeTabs">
+                <codeblock outputclass="language-java">class JavaTest {
+  public String a = null;
+}</codeblock>
+                <codeblock outputclass="language-cpp">// c++ sample
+public int main() {
+  return 0;
+}</codeblock>
+                <codeblock outputclass="language-xml">&lt;test>
+  XML is the best!
+&lt;/test></codeblock> 
+            </div>
+        </example>
+        <postreq>Learn more about oXygen XML Editor, Author and Web Author as well as how LESS can be used to specify CSS styles.</postreq>
+    </taskbody>
+</task>

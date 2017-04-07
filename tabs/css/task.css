@@ -1,0 +1,314 @@
+taskbody {
+  display: block;
+  margin: 2em;
+  border-bottom: 1px solid #add8e6;
+  border-left: 1px solid #add8e6;
+  border-right: 1px solid #add8e6;
+  position: relative;
+  min-height: 80px;
+  white-space: trim-when-ws-only;
+}
+taskbody:before(19005) {
+  display: block;
+  position: relative;
+  content: " ";
+  right: 0;
+  left: 0;
+  background-color: #add8e6;
+  top: -1px;
+  height: 2px;
+  font-size: 1px;
+  padding: 2px;
+}
+taskbody:before(19006) {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 22px;
+  font-size: 0.9em;
+  width: 2px;
+  outline: 2px solid white;
+  background-color: white;
+  content: "";
+}
+taskbody > * {
+  white-space: normal;
+}
+taskbody > result {
+  margin: 1em;
+}
+taskbody:before(19996) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Result ', description, 'Edit Result', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2 -oxy-visible-3  -oxy-visible-5 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-4')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+taskbody:-oxy-visible-4:before(19996) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody:-oxy-visible-4 > * {
+  display: none;
+}
+taskbody:-oxy-visible-4 > result {
+  display: block;
+}
+taskbody > steps {
+  margin: 1em;
+}
+taskbody:before(19997) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Steps ', description, 'Edit Steps', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2  -oxy-visible-4 -oxy-visible-5 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-3')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+taskbody:-oxy-visible-3:before(19997) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody:-oxy-visible-3 > * {
+  display: none;
+}
+taskbody:-oxy-visible-3 > steps {
+  display: block;
+}
+taskbody > context {
+  margin: 1em;
+}
+taskbody:before(19998) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Context ', description, 'Edit Context', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1  -oxy-visible-3 -oxy-visible-4 -oxy-visible-5 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-2')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+taskbody:-oxy-visible-2:before(19998) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody:-oxy-visible-2 > * {
+  display: none;
+}
+taskbody:-oxy-visible-2 > context {
+  display: block;
+}
+taskbody:not(:-oxy-visible) > * {
+  display: none;
+}
+taskbody:not(:-oxy-visible) > prereq {
+  display: block;
+}
+taskbody:not(:-oxy-visible):before(19999) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody > prereq {
+  margin: 1em;
+}
+taskbody:before(19999) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Pre-requisites ', description, 'Edit Pre-requisites', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 -oxy-visible-4 -oxy-visible-5 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+taskbody:-oxy-visible-1:before(19999) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody:-oxy-visible-1 > * {
+  display: none;
+}
+taskbody:-oxy-visible-1 > prereq {
+  display: block;
+}
+taskbody > prereq {
+  margin: 1em;
+}
+taskbody:before(19999) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Pre-requisites ', description, 'Edit Pre-requisites', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 -oxy-visible-4 -oxy-visible-5 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+taskbody:-oxy-visible-1:before(19999) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody:-oxy-visible-1 > * {
+  display: none;
+}
+taskbody:-oxy-visible-1 > prereq {
+  display: block;
+}
+taskbody > *:not(prereq):not(context):not(steps):not(result) {
+  margin: 1em;
+}
+taskbody:before(19995) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Others ', description, 'Edit Others', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2 -oxy-visible-3 -oxy-visible-4  ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-5')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+taskbody:-oxy-visible-5:before(19995) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+taskbody:-oxy-visible-5 > * {
+  display: none;
+}
+taskbody:-oxy-visible-5 > *:not(prereq):not(context):not(steps):not(result) {
+  display: block;
+}
+div {
+  display: block;
+  margin: 2em;
+  border-bottom: 1px solid #add8e6;
+  border-left: 1px solid #add8e6;
+  border-right: 1px solid #add8e6;
+  position: relative;
+  min-height: 80px;
+  white-space: trim-when-ws-only;
+}
+div:before(19005) {
+  display: block;
+  position: relative;
+  content: " ";
+  right: 0;
+  left: 0;
+  background-color: #add8e6;
+  top: -1px;
+  height: 2px;
+  font-size: 1px;
+  padding: 2px;
+}
+div:before(19006) {
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: 22px;
+  font-size: 0.9em;
+  width: 2px;
+  outline: 2px solid white;
+  background-color: white;
+  content: "";
+}
+div > * {
+  white-space: normal;
+}
+div > codeblock[outputclass~='language-xml'] {
+  margin: 1em;
+}
+div:before(19997) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' XML ', description, 'Edit XML', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2  ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-3')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+div:-oxy-visible-3:before(19997) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+div:-oxy-visible-3 > * {
+  display: none;
+}
+div:-oxy-visible-3 > codeblock[outputclass~='language-xml'] {
+  display: block;
+}
+div > codeblock[outputclass~='language-cpp'] {
+  margin: 1em;
+}
+div:before(19998) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' CPP ', description, 'Edit CPP', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1  -oxy-visible-3 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-2')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+div:-oxy-visible-2:before(19998) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+div:-oxy-visible-2 > * {
+  display: none;
+}
+div:-oxy-visible-2 > codeblock[outputclass~='language-cpp'] {
+  display: block;
+}
+div:not(:-oxy-visible) > * {
+  display: none;
+}
+div:not(:-oxy-visible) > codeblock[outputclass~='language-java'] {
+  display: block;
+}
+div:not(:-oxy-visible):before(19999) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+div > codeblock[outputclass~='language-java'] {
+  margin: 1em;
+}
+div:before(19999) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Java ', description, 'Edit Java', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+div:-oxy-visible-1:before(19999) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+div:-oxy-visible-1 > * {
+  display: none;
+}
+div:-oxy-visible-1 > codeblock[outputclass~='language-java'] {
+  display: block;
+}
+div > codeblock[outputclass~='language-java'] {
+  margin: 1em;
+}
+div:before(19999) {
+  position: relative;
+  display: inline-block;
+  right: 1px;
+  bottom: 1px;
+  content: " " oxy_button(transparent, true, action, oxy_action(name, ' Java ', description, 'Edit Java', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
+  border: 1px solid #add8e6;
+  height: 22px;
+}
+div:-oxy-visible-1:before(19999) {
+  background-color: #add8e6;
+  border-bottom: 1px solid #add8e6;
+}
+div:-oxy-visible-1 > * {
+  display: none;
+}
+div:-oxy-visible-1 > codeblock[outputclass~='language-java'] {
+  display: block;
+}

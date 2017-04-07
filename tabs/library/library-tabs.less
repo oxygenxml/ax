@@ -1,0 +1,183 @@
+@tabs_tabColor:lightblue;
+@tabs_tabBorderColor:lightblue;
+
+@tabs_barLevel:19005;
+@tabs_fixBorderLevel:19006;
+@tabs_maxLevel:20000;
+
+.tabs_whitespace() {
+    & {
+        white-space:trim-when-ws-only;
+    }
+    & > * {
+        white-space:normal;
+    }
+}
+
+.tabs_useTabs(@tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) {
+    & {    
+        display:block;
+        margin:2em;
+        border-bottom:1px solid @tabborder;
+        border-left:1px solid @tabborder;
+        border-right:1px solid @tabborder;
+        position:relative;
+        min-height:80px;
+    }
+    
+    &:before(@{tabs_barLevel}) {
+        display:block;
+        position:relative;
+        content:" ";
+        right:0;
+        left: 0;
+        background-color:@tabcolor;
+        top:-1px;
+        height:2px;
+        font-size:1px;
+        padding:2px;
+    }
+    
+    &:before(@{tabs_fixBorderLevel}) {
+        display:block;
+        position:absolute;
+        right:0;
+        top:0;
+        height:22px;
+        font-size:0.9em;;
+        width:2px;
+        outline:2px solid white;
+        background-color:white;
+        content:"";
+    }
+}
+
+
+.tabs_defaultTab(@layer, @name, @element, @index, @pseudoclasses, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) {
+    @selector : e(@element);
+    &:not(:-oxy-visible) > * {
+        display:none;
+    }
+    &:not(:-oxy-visible) > @{selector} {
+        display:block;
+    }
+    
+    &:not(:-oxy-visible):before(@{layer}) {
+        background-color:@tabcolor;
+        border-bottom:1px solid @tabcolor;
+    }
+    
+    .tabs_tab(@layer, @name, @element, @index, @pseudoclasses, @tabborder, @tabcolor);
+}
+
+.tabs_tab(@layer, @name, @element, @index, @pseudoclasses, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) {
+    @selector : e(@element);
+
+    .tabs_commonTab(@layer, @name, @element, @index, @pseudoclasses, @tabborder, @tabcolor);    
+   
+    &:-oxy-visible-@{index} > * {
+        display:none;
+    }
+    &:-oxy-visible-@{index} > @{selector} {
+        display:block;
+    }
+}
+.tabs_commonTab(@layer, @name, @element, @index, @pseudoclasses, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) {
+    @selector : e(@element);
+
+    & > @{selector} {
+        margin:1em;
+    }
+    
+    &:before(@{layer}) {
+        position:relative;
+        display:inline-block;
+        right:1px;
+        bottom:1px;
+        content: " "
+            oxy_button(transparent, true, action, oxy_action(
+                  name, ' @{name} ', 
+                  description, 'Edit @{name}', 
+                  operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation',
+                  arg-removePseudoClassNames, replace(@pseudoclasses, '-oxy-visible-@{index}', ''),
+                  arg-setPseudoClassNames, '-oxy-visible -oxy-visible-@{index}'     
+                )) " ";
+         border:1px solid @tabborder;
+         height:22px;
+    }
+    
+    &:-oxy-visible-@{index}:before(@{layer}) {
+        background-color:@tabcolor;
+        border-bottom:1px solid @tabcolor;
+    }
+}
+
+// Generate all presudoclasses in @pseudoclasses -oxy-visible-1 -oxy-visible-2 ...
+.tabs_generateAllPseudoClasses(@n) {
+    .tabs_loopPseusoclasses(@n, '');
+}
+.tabs_loopPseusoclasses(@n, @c) when (@n > 0) {
+  @c2:%('-oxy-visible-%s %s', @n, @c);
+  .tabs_loopPseusoclasses((@n - 1), @c2);    
+}
+.tabs_loopPseusoclasses(@n, @c) when (@n = 0) {
+    @pseudoclasses:%('%s', @c);
+}
+// end generate pseudoclasses
+
+
+.tabs_loopTabs(@n, @elements, @labels, @pseudoclasses, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) when (@n = 1) {
+  @e:extract(@elements, @n);
+  @l:extract(@labels, @n);
+  @level:@tabs_maxLevel - @n;
+  
+  .tabs_defaultTab(@level, @l, @e, @n, @pseudoclasses, @tabborder, @tabcolor);
+  .tabs_loopTabs((@n - 1), @elements, @labels, @pseudoclasses, @tabborder, @tabcolor);    // next iteration
+}
+
+
+.tabs_loopTabs(@n, @elements, @labels, @pseudoclasses, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) when (@n > 0) {
+  @element:extract(@elements, @n);
+  @label:extract(@labels, @n);
+  @level:@tabs_maxLevel - @n;
+  .tabs_tab(@level, @label, @element, @n, @pseudoclasses, @tabborder, @tabcolor);
+  .tabs_loopTabs((@n - 1), @elements, @labels, @pseudoclasses, @tabborder, @tabcolor);    // next iteration
+}
+
+// Generate a selector to match none of the others *:not(element):not(element)...
+.tabs_generateOtherSelector(@n, @elements) {
+    .tabs_loopElements(@n, @elements, '');
+}
+.tabs_loopElements(@n, @elements, @c) when (@n > 0) {
+  @e:extract(@elements, @n);
+  @c2:%(':not(%s)%s', @e, @c);
+  .tabs_loopElements((@n - 1), @elements, @c2);    
+}
+.tabs_loopElements(@n, @elements, @c) when (@n = 0) {
+    @otherSelectorRaw:%('*%s', @c);
+}
+// end generate selector
+
+.tabs(@elements, @labels:@elements, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) {
+    @n : length(@elements);
+    .tabs_generateAllPseudoClasses(@n);
+    & {
+     .tabs_useTabs(@tabborder, @tabcolor);
+     .tabs_whitespace();
+     .tabs_loopTabs(@n, @elements, @labels, @pseudoclasses, @tabborder, @tabcolor);
+    }
+}
+
+.tabsWithOthers(@elements, @labels:@elements, @otherLabel:Others, @tabborder:@tabs_tabBorderColor, @tabcolor:@tabs_tabColor) {
+    @n : length(@elements) + 1;
+    .tabs_generateAllPseudoClasses(@n);
+    & {
+     .tabs_useTabs(@tabborder, @tabcolor);
+     .tabs_whitespace();
+     .tabs_loopTabs(@n - 1 , @elements, @labels, @pseudoclasses, @tabborder, @tabcolor);
+    }
+    .tabs_generateOtherSelector(@n - 1, @elements);
+    @otherSelector:@otherSelectorRaw;
+    
+    .tabs_tab(@tabs_maxLevel - @n, @otherLabel, @otherSelector, @n, @pseudoclasses, @tabborder, @tabcolor);
+}
