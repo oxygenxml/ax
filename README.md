@@ -69,3 +69,8 @@ or you can try it live in the oXygen XML Web Author with the tabs described abov
 `tabs/css/task.less` file:
 [task.dita](https://www.oxygenxml.com/webapp-demo-aws/app/oxygen.html?url=github%3A%2F%2FgetFileContent%2Foxygenxml%2Fax%2Fmaster%2Ftabs%2Fsample%2Ftask.dita).
 
+Copyright and License
+---------------------
+Copyright 2018 Syncro Soft SRL.
+
+This project is licensed under [Apache License 2.0](https://github.com/oxygenxml/ax/blob/master/LICENSE)
