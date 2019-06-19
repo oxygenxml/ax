@@ -25,7 +25,7 @@ taskbody:before(19006) {
   position: absolute;
   right: 0;
   top: 0;
-  height: 22px;
+  height: 26px;
   font-size: 0.9em;
   width: 2px;
   outline: 2px solid white;
@@ -45,7 +45,7 @@ taskbody:before(19997) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' Steps ', description, 'Edit Steps', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2  -oxy-visible-4 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-3')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 taskbody:-oxy-visible-3:before(19997) {
   background-color: #add8e6;
@@ -67,7 +67,7 @@ taskbody:before(19998) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' Context ', description, 'Edit Context', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1  -oxy-visible-3 -oxy-visible-4 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-2')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 taskbody:-oxy-visible-2:before(19998) {
   background-color: #add8e6;
@@ -99,7 +99,7 @@ taskbody:before(19999) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' Pre-requisites ', description, 'Edit Pre-requisites', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 -oxy-visible-4 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 taskbody:-oxy-visible-1:before(19999) {
   background-color: #add8e6;
@@ -121,7 +121,7 @@ taskbody:before(19999) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' Pre-requisites ', description, 'Edit Pre-requisites', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 -oxy-visible-4 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 taskbody:-oxy-visible-1:before(19999) {
   background-color: #add8e6;
@@ -143,7 +143,7 @@ taskbody:before(19996) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' More... ', description, 'Edit More...', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2 -oxy-visible-3  ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-4')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 taskbody:-oxy-visible-4:before(19996) {
   background-color: #add8e6;
@@ -182,7 +182,7 @@ div:before(19006) {
   position: absolute;
   right: 0;
   top: 0;
-  height: 22px;
+  height: 26px;
   font-size: 0.9em;
   width: 2px;
   outline: 2px solid white;
@@ -202,7 +202,7 @@ div:before(19997) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' XML ', description, 'Edit XML', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1 -oxy-visible-2  ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-3')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 div:-oxy-visible-3:before(19997) {
   background-color: #add8e6;
@@ -224,7 +224,7 @@ div:before(19998) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' CPP ', description, 'Edit CPP', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, '-oxy-visible-1  -oxy-visible-3 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-2')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 div:-oxy-visible-2:before(19998) {
   background-color: #add8e6;
@@ -256,7 +256,7 @@ div:before(19999) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' Java ', description, 'Edit Java', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 div:-oxy-visible-1:before(19999) {
   background-color: #add8e6;
@@ -278,7 +278,7 @@ div:before(19999) {
   bottom: 1px;
   content: " " oxy_button(transparent, true, action, oxy_action(name, ' Java ', description, 'Edit Java', operation, 'ro.sync.ecss.extensions.commons.operations.ChangePseudoClassesOperation', arg-removePseudoClassNames, ' -oxy-visible-2 -oxy-visible-3 ', arg-setPseudoClassNames, '-oxy-visible -oxy-visible-1')) " ";
   border: 1px solid #add8e6;
-  height: 22px;
+  height: 26px;
 }
 div:-oxy-visible-1:before(19999) {
   background-color: #add8e6;
